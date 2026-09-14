@@ -121,5 +121,36 @@ p {margin-bottom: 16px;}
     text-align: center;
 }
 
+/* 5. Now I will desgin the image and section */
+.page-section {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #dce3ef;
+}
 
+.portrait-img {
+    display: block;
+    width: 260px;
+    max-width: 100%;
+    height: auto;
+    margin: 20px auto;
+    border: 5px solid #4169ed;
+    border-radius: 20%;
+}
+
+/* 6. I will design my contents of the website into grid of cards */
+.page-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 20px;
+}
+
+.page-card {
+    padding: 20px;
+    border: 1px solid #dce3ef;
+    border-top: 4px solid #4169ed;
+    border-radius: 8px;
+    background-color: #f7f9ff;
+}
 
