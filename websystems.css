@@ -9,15 +9,15 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.6;
     overflow-wrap: break-word;
-    padding-top: 30px;
 }
 .page-content {
-    width: 90%;
-    max-width: 960px;
+    width: 100%;
     margin: 0 auto;
 }
 #page-main {
     min-height: 65vh;
+    width: 90%;
+    margin:0 auto;
     padding: 30px 0;
 }
 
@@ -32,14 +32,14 @@ a:hover {
 /* After that, I set the design for main content */
 /* 3. Navigation Bar and Heeader Design */
 .page-header {
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1000;
     padding: 15px 5%;
     background-color: white;
-    border-bottom: 1px solid #dce3ef;
+    display: flow-root;
 }
 .logo {
     float: left;
@@ -100,8 +100,8 @@ p {margin-bottom: 16px;}
 .page-footer {
     margin: 0;
     padding: 10px 0;
-    border-top: 1px solid #142b36;
     color: #142b36;
+    border-top: 1px solid #142b36;
     font-size: 16px;
     font-style: italic;
     text-align: center;
@@ -111,12 +111,11 @@ p {margin-bottom: 16px;}
 .page-section {
     margin-top: 32px;
     padding-top: 16px;
-    border-top: 1px solid #dce3ef;
+    border-top: 1px solid #142b36;
 }
 .portrait-img {
     display: block;
-    width: 260px;
-    max-width: 100%;
+    width: 40%;
     height: auto;
     margin: 16px auto;
     border: 5px solid #4169ed;
@@ -125,15 +124,13 @@ p {margin-bottom: 16px;}
 
 /* 6. I will design my contents of the website into grid of cards */
 .page-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
     margin-top: 16px;
-    text-align: center;
 }
+
 .page-card {
-    display: inline-block;
-    vertical-align: top;
-    width: 45%;
-    height: 350px;
-    margin: 0 1% 16px;
     padding: 20px;
     border: 1px solid #ffffff;
     border-top: 4px solid #4169ed;
@@ -141,7 +138,6 @@ p {margin-bottom: 16px;}
     background-color: #f7f9ff;
     text-align: left;
     overflow-wrap: break-word;
-    overflow: auto;
 }
 
 /* 7. Now I will design the involved tables */
@@ -169,5 +165,25 @@ caption {
     margin-bottom: 8px;
     font-style: italic;
     text-align: center;
+}
+
+/* 8. Finall, I desgin the visualisation when windown is small */
+@media (max-width: 650px) {
+    .page-header {
+        text-align: center;
+    }
+    .logo,
+    .nav-bar {
+        float: none;
+    }
+    .nav-bar li {
+        margin: 0 10px;
+    }
+    .page-grid{
+        grid-template-columns: 1fr;
+    }
+    .page-card {
+        min-height: 0;
+    }
 }
 
