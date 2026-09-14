@@ -2,7 +2,6 @@
 * {
     box-sizing: border-box; 
 }
-
 body {
     margin: 0;
     background-color: #F5F5F5;
@@ -10,15 +9,13 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.6;
     overflow-wrap: break-word;
-    padding-top: 16px;
+    padding-top: 30px;
 }
-
 .page-content {
     width: 90%;
     max-width: 960px;
     margin: 0 auto;
 }
-
 #page-main {
     min-height: 65vh;
     padding: 30px 0;
@@ -39,47 +36,40 @@ a:hover {
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 10;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
+    z-index: 1000;
     padding: 15px 5%;
     background-color: white;
     border-bottom: 1px solid #dce3ef;
 }
-
 .logo {
-    margin: 0;
-    font-size:36px; 
-    font-weight: bold;
-    color:#3159d9;
-}
-
-.page-header  p {
+    float: left;
     margin: 0;
     font-size: 20px;
     font-weight: bold;
+    line-height: 40px;
+    color: #3159d9;
 }
-
+.nav-bar {
+    float: right;
+    margin: 0;
+    line-height: 40px;
+}
 .nav-bar ul {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
     margin: 0;
     padding: 0;
     list-style: none;
 }
-
+.nav-bar li {
+    display: inline-block;
+    margin-left: 30px;
+}
 .nav-bar a {
-    display: block;
-    padding: 5px 0;
+    display: inline-block;
+    padding: 0;
     color: #142b36;
     font-weight: bold;
     text-decoration: none;
 }
-
 .nav-bar a:hover,
 .nav-bar a[aria-current="page"] {
     color: #3159d9;
@@ -91,19 +81,15 @@ h1 {
     line-height: 1.25;
     font-size: 36px;
 }
-
 h2 {
     line-height: 1.25;
     font-size: 28px;
 }
-
 h3 {
     line-height: 1.25;
     font-size: 24px;
 }
-
 p {margin-bottom: 16px;}
-
 .highlight {
     color : #3159d9;
     font-size: larger;
@@ -117,40 +103,71 @@ p {margin-bottom: 16px;}
     border-top: 1px solid #142b36;
     color: #142b36;
     font-size: 16px;
-    font-style: bold;
+    font-style: italic;
     text-align: center;
 }
 
 /* 5. Now I will desgin the image and section */
 .page-section {
-    margin-top: 30px;
-    padding-top: 20px;
+    margin-top: 32px;
+    padding-top: 16px;
     border-top: 1px solid #dce3ef;
 }
-
 .portrait-img {
     display: block;
     width: 260px;
     max-width: 100%;
     height: auto;
-    margin: 20px auto;
+    margin: 16px auto;
     border: 5px solid #4169ed;
-    border-radius: 20%;
+    border-radius: 30px;
 }
 
 /* 6. I will design my contents of the website into grid of cards */
 .page-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
-    margin-top: 20px;
+    margin-top: 16px;
+    text-align: center;
+}
+.page-card {
+    display: inline-block;
+    vertical-align: top;
+    width: 45%;
+    height: 350px;
+    margin: 0 1% 16px;
+    padding: 20px;
+    border: 1px solid #ffffff;
+    border-top: 4px solid #4169ed;
+    border-radius: 15px;
+    background-color: #f7f9ff;
+    text-align: left;
+    overflow-wrap: break-word;
+    overflow: auto;
 }
 
-.page-card {
-    padding: 20px;
-    border: 1px solid #dce3ef;
-    border-top: 4px solid #4169ed;
-    border-radius: 8px;
-    background-color: #f7f9ff;
+/* 7. Now I will design the involved tables */
+table {
+    width: 100%;
+    margin: 16px 0;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+td {
+    padding: 8px;
+    border: 1px solid #cbd5e1;
+    text-align: left;
+    vertical-align: top;
+}
+th {
+    padding: 8px;
+    border: 1px solid #cbd5e1;
+    text-align: center;
+    vertical-align: top;
+    background-color: #3159d9;
+    color: white;
+}
+caption {
+    margin-bottom: 8px;
+    font-style: italic;
+    text-align: center;
 }
 
