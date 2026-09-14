@@ -96,7 +96,7 @@ p {margin-bottom: 16px;}
     font-weight: bold;
 }
 
-/* 4. Design the footer */
+/* 5. Next I will design the footer to show my authority */
 .page-footer {
     margin: 0;
     padding: 10px 0;
@@ -107,7 +107,7 @@ p {margin-bottom: 16px;}
     text-align: center;
 }
 
-/* 5. Now I will desgin the image and section */
+/* 6. Now I will desgin the image and overal content section */
 .page-section {
     margin-top: 32px;
     padding-top: 16px;
@@ -122,8 +122,7 @@ p {margin-bottom: 16px;}
     border-radius: 30px;
 }
 
-/* 6. I will design my contents of the website into grid of cards */
-
+/* 7. Additioanlly, I will design my contents of the website into grid of cards */
 /* This is advanced, outside research technique, as initially I used normal page grid and inline-block cards*/
 /* However I can't be able to ensure their height being the same and adaptive to changes in text length */
 /* That's why I researched and use display:grid (based on W3Schools)*/
@@ -144,7 +143,7 @@ p {margin-bottom: 16px;}
     overflow-wrap: break-word;
 }
 
-/* 7. Now I will design the involved tables */
+/* 8. Moving forward, I will decorate the involved tables */
 table {
     width: 100%;
     margin: 16px 0;
@@ -171,7 +170,7 @@ caption {
     text-align: center;
 }
 
-/* 8. Finall, I desgin the visualisation when windown is small */
+/* 9. Finall, I desgin the webpage structure when windown is small for better visability and avoid cut off or overlap */
 @media (max-width: 650px) {
     .page-header {
         text-align: center;
