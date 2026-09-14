@@ -123,6 +123,10 @@ p {margin-bottom: 16px;}
 }
 
 /* 6. I will design my contents of the website into grid of cards */
+
+/* This is advanced, outside research technique, as initially I used normal page grid and inline-block cards*/
+/* However I can't be able to ensure their height being the same and adaptive to changes in text length */
+/* That's why I researched and use display:grid (based on W3Schools)*/
 .page-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
