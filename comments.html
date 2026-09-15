@@ -26,7 +26,7 @@
             <a href="#overall-design">overall website design</a>,
             <a href="#html-design">internal HTML structure</a>,
             <a href="#css-design">CSS implementation</a>,
-            <a href="#design-reasoning">aesthetics</a> and
+            <a href="#design-reasoning">design reasoning</a> and
             <a href="#design-accessibility">accessibility</a>.
         </p>
         <section id = "overall-design" class="page-section">
@@ -218,9 +218,18 @@
                         <td>@media (max-width: 650px)</td>
                         <td>I centre the header content, remove floats and stack cards into one column on smaller screens to improve readability and reduce crowding.</td>
                     </tr>
+                    <tr>
+                        <td>Internal navigation spacing</td>
+                        <td>
+                            #page-main<br>
+                            #past-study<br>
+                            #past-experience<br>
+                            Other section IDs used for internal navigation
+                        </td>
+                        <td>I add scroll-margin-top to leave space above selected anchor destinations, helping prevent the sticky header from covering content when users follow internal links.</td>
+                    </tr>
                 </tbody>
             </table>
-
             <p>
                 I researched and chose CSS Grid because my earlier inline-block layout
                 did not automatically equalise neighbouring card heights, while fixed
@@ -230,11 +239,58 @@
             </p>
         </section>
         <section id ="design-reasoning" class ="page-section">
-            <h2>Aesthetics and Design Selection</h2>
+            <h2>Design Reasoning</h2>
+            <p>My website design uses a simple grey, white, black and blue colour scheme to create a professional look and keep the focus on the content.</p>
+            <table>
+            <caption>Design choices and reasoning</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Design choice</th>
+                        <th scope="col">Reasoning</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Light grey background and white header with black border</td>
+                        <td>I use a light grey background to keep attention on the dark content. A white header with a black border separates navigation from content while scrolling.</td>
+                    </tr>
+                    <tr>
+                        <td>Dark text and blue accents</td>
+                        <td>I use dark text for contrast against light backgrounds. Blue accents reinforce my colour theme and draw attention to links, my name and selected borders.</td>
+                    </tr>
+                    <tr>
+                        <td>Arial and fallback fonts</td>
+                        <td>I choose Arial for its familiar, readable appearance, with Helvetica and a generic sans-serif as alternatives if Arial is unavailable.</td>
+                    </tr>
+                    <tr>
+                        <td>Heading sizes</td>
+                        <td>I use 36px, 28px and 24px for page titles, sections and subsections to make the content hierarchy clear and easy to scan.</td>
+                    </tr>
+                    <tr>
+                        <td>Section borders</td>
+                        <td>I use thin top borders to separate topics and help readers recognise transitions between sections.</td>
+                    </tr>
+                    <tr>
+                        <td>Cards</td>
+                        <td>I use cards to divide content into manageable groups. Pale backgrounds and padding separate each group, while blue top borders maintain the colour theme.</td>
+                    </tr>
+                    <tr>
+                        <td>Tables</td>
+                        <td>I use tables to make experiences, skills, CSS techniques and design decisions easy to compare. Blue headings with white text distinguish column labels from data.</td>
+                    </tr>
+                    <tr>
+                        <td>Image styling</td>
+                        <td>I give my portrait a blue border and rounded corners to match the theme and cards. I centre diagrams with transparent backgrounds and adjust their widths to make key information readable.</td>
+                    </tr>
+                    <tr>
+                        <td>Consistent navigation and footer</td>
+                        <td>I keep navigation and footer placement consistent so pages feel familiar. The active link identifies the current page, while centred, italic footer text and a separating border distinguish author information.</td>
+                    </tr>
+                </tbody>
+            </table>
         </section>
-
         <section id ="design-accessibility" class = "page-section">
-            <h2>Accessibility and Resizable</h2>
+            <h2>Accessibility and Resisable</h2>
         </section>
     </main>
     <footer class="page-footer">

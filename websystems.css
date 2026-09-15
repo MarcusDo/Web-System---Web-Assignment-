@@ -182,13 +182,34 @@ caption {
     text-align: center;
 }
 
-/* 9. Finall, I desgin the webpage structure when windown is small for better visability and avoid cut off or overlap */
+/* 9. Here I fix content overlap with header after internal links navigation */
+#past-study,
+#past-experience,
+#past-skills,
+#overall-design,
+#html-design,
+#css-design,
+#design-reasoning,
+#design-accessibility {
+    scroll-margin-top: 40px;
+}
+
+
+/* 10. Finall, I desgin the webpage structure when windown is small for better visability and avoid cut off or overlap */
 @media (max-width: 650px) {
     .page-header {
         text-align: center;
     }
+    #past-study,
+    #past-experience,
+    #past-skills,
+    #overall-design,
+    #html-design,
+    #css-design,
+    #design-reasoning,
+    #design-accessibility,
     #page-main{
-        scroll-margin-top: 60px;
+        scroll-margin-top: 80px;
     }
     .logo,
     .nav-bar {
