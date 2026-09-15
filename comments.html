@@ -19,6 +19,224 @@
             </ul>
         </nav>
     </header>
+    <main id = "page-main">
+        <h1>Comments Page</h1>
+        <p>
+            This page explains the website’s HTML and CSS techniques, covering
+            <a href="#overall-design">overall website design</a>,
+            <a href="#html-design">internal HTML structure</a>,
+            <a href="#css-design">CSS implementation</a>,
+            <a href="#design-reasoning">aesthetics</a> and
+            <a href="#design-accessibility">accessibility</a>.
+        </p>
+        <section id = "overall-design" class="page-section">
+
+            <h2>Overall Website Structure</h2>
+            <p>My website consists of four HTML pages with distinct purposes and one shared CSS stylesheet. Its structure supports consistent presentation and clear navigation, with:</p>
+            <ul>
+                <li>A consistent navigation bar links to all four pages, allowing direct navigation without returning to Home or using the browser’s back button.</li>
+                <li>The shared stylesheet provides a consistent visual theme across all pages.</li>
+                <li>Relative paths preserve link functionality after uploading to Ed, provided the folder structure remains unchanged.</li>
+                <li>Overview cards on Home provide descriptions and links to help users explore the website.</li>
+            </ul>
+
+            <table>
+                <caption>Content organisation of each webpage</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Page</th>
+                        <th scope="col">Content organisation</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Home</td>
+                        <td>An introduction, About Me with a portrait, and four website overview cards.</td>
+                    </tr>
+                    <tr>
+                        <td>Past</td>
+                        <td>An introductory section with navigation links to the content within the page. The page covers Studies, Experiences and Technical Skills, each presented in a table.</td>
+                    </tr>
+                    <tr>
+                        <td>Future</td>
+                        <td>An introductory section without internal navigation links, as the page content is short. The page covers future goals and skills to improve, presented as lists in two cards.</td>
+                    </tr>
+                    <tr>
+                        <td>Comments</td>
+                        <td>An introductory section with navigation links to the content within the page. The page covers overall website architecture, internal HTML structure, CSS organisation, aesthetics and design reasoning, and accessibility and resizing.</td>
+                    </tr>
+                </tbody>
+            </table>    
+
+            <img class ="overall-design-img" src = "img/WebsiteStructure.png" alt="This is the Overall Website Structure's visualisation">
+        </section>
+        <section id ="html-design" class ="page-section">
+            <h2>Internal HTML Structure</h2>
+            <div class ="page-grid">
+                <div class = "page-card">
+                    <h3>Shared structure</h3>
+                    <p>
+                        Each page separates document information from visible content. 
+                        The &lt;head&gt; contains metadata, the page title and the stylesheet link, 
+                        while the &lt;body&gt; contains a &lt;header&gt; with the logo and &lt;nav&gt;, 
+                        a &lt;main&gt; for primary content, and a &lt;footer&gt; for author information.
+                    </p>
+                    <p>
+                        Within &lt;main&gt;, I use &lt;section&gt; to group related content under headings 
+                        and &lt;div&gt; for layout containers such as cards. Semantic elements clarify the content’s purpose for browsers and assistive technologies, 
+                        keeping the structure understandable without CSS. A &lt;div&gt; has no specific semantic meaning.
+                    </p>
+                    <p>
+                        A consistent header, navigation and footer make the pages familiar to visitors, 
+                        although shared navigation changes require updating every HTML file.
+                    </p>
+                </div>
+                <div class = "page-card">
+                    <h3>Differences between pages</h3>
+                    <p>
+                        The main differences between my pages are within &lt;main&gt;, where I choose elements to suit each page’s content:
+                    </p>
+                    <ul>
+                        <li>Home: Paragraphs and a portrait introduce me, followed by four cards with page descriptions and navigation links.</li>
+                        <li>Past: Three tables organise my studies, experiences and technical skills for comparison. The rowspan attribute groups subjects within the same study area.</li>
+                        <li>Future: Two cards separate my goals from skills to improve, each using a heading and an unordered list.</li>
+                        <li>Comments: Headed sections, paragraphs, tables, cards, lists and diagrams explain the website’s structure and design.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <img class = "html-structure-img" src ="img/InternalHTML.png" alt="This is the Internal HTML structure's visualisation">
+
+            <div class ="page-grid">
+                <div class = "page-card">
+                    <h3>Classes, IDs and navigation</h3>
+                    <p>
+                        Here, I use classes for reusable styling and IDs to identify unique sections for navigation within a page. 
+                        An element can use both: its class applies shared styling, while its ID provides a unique link destination.
+                    </p>
+                    <p>
+                        I provide four navigation links on every page, plus internal links on Past and Comments to reach specific sections. 
+                        I use relative paths so links continue working after upload, provided the folder structure is preserved.
+                    </p>
+                </div>
+                <div class ="page-card">
+                    <h3>Text Emphasis and Accessible Content</h3>
+                    <p>
+                        I use &lt;span&gt; with a class to visually highlight my name through CSS while keeping it inline, 
+                        whereas &lt;strong&gt; conveys semantic importance. I also use table captions to identify each table’s 
+                        purpose and scoped column headings to associate labels with their data. 
+                        My portrait includes alternative text describing the image when it cannot be seen. 
+                        Even without CSS, headings, paragraphs, lists and tables preserve the content’s logical structure.
+                    </p>
+                </div>
+            </div>
+
+        </section>
+    
+        <section id ="css-design" class ="page-section">
+            <h2>CSS Implementation</h2>
+            <p>
+                I use one external CSS stylesheet to maintain a consistent visual design
+                across all four HTML pages and simplify updates to shared styles.
+            </p>
+
+            <table>
+                <caption>CSS organisation, implementation and reasoning</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Purpose</th>
+                        <th scope="col">Selectors</th>
+                        <th scope="col">Implementation and reasoning</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>General styling</td>
+                        <td>*, body</td>
+                        <td>I use box-sizing: border-box to include padding and borders within specified dimensions, making sizes easier to control. Shared colours, fonts and line spacing provide consistency, while word wrapping helps prevent long text from overflowing.</td>
+                    </tr>
+                    <tr>
+                        <td>Page layout</td>
+                        <td>#page-main</td>
+                        <td>I centre the main content at 90% of its container’s width to leave side margins for readability. Padding separates content from its edges, while a minimum height maintains the layout on shorter pages.</td>
+                    </tr>
+                    <tr>
+                        <td>Header layout</td>
+                        <td>.page-header, .logo, .nav-bar</td>
+                        <td>I use sticky positioning to keep navigation available while scrolling. I float the logo left and navigation right to separate the website’s identity from its navigation links.</td>
+                    </tr>
+                    <tr>
+                        <td>Navigation</td>
+                        <td>.nav-bar ul, .nav-bar li, .nav-bar a</td>
+                        <td>I remove list markers and arrange navigation links horizontally for a cleaner appearance. Spacing makes individual links easier to distinguish and select.</td>
+                    </tr>
+                    <tr>
+                        <td>Link feedback</td>
+                        <td>
+                            .nav-bar a[aria-current="page"]<br>
+                            a:hover<br>
+                            .nav-bar a:hover
+                        </td>
+                        <td>I use blue text and an underline to identify the current page. Hover styles provide visual feedback when users move their pointer over links.</td>
+                    </tr>
+                    <tr>
+                        <td>Text hierarchy and highlighting</td>
+                        <td>h1, h2, h3, p, .highlight</td>
+                        <td>I adjust heading sizes and text spacing to establish a clear visual hierarchy. Highlighting my name draws attention to key information and helps users scan the content.</td>
+                    </tr>
+                    <tr>
+                        <td>Content sections</td>
+                        <td>.page-section</td>
+                        <td>I add spacing and border lines between major topics to separate sections and improve readability.</td>
+                    </tr>
+                    <tr>
+                        <td>Images</td>
+                        <td>
+                            .portrait-img<br>
+                            .overall-design-img<br>
+                            .html-structure-img
+                        </td>
+                        <td>I centre images and size them proportionally to fit the surrounding content and adapt to different window sizes without distortion.</td>
+                    </tr>
+                    <tr>
+                        <td>Content cards</td>
+                        <td>.page-grid, .page-card</td>
+                        <td>I use Grid to arrange cards into two equal-width columns with gaps. Background colours and borders group related content and maintain a consistent design.</td>
+                    </tr>
+                    <tr>
+                        <td>Tables</td>
+                        <td>table, td, th, caption</td>
+                        <td>I style table widths, borders, alignment and headings to make information easier to read and compare while matching the website’s design.</td>
+                    </tr>
+                    <tr>
+                        <td>Footer</td>
+                        <td>.page-footer</td>
+                        <td>I use spacing, a top border and text styling to distinguish author information from the main content.</td>
+                    </tr>
+                    <tr>
+                        <td>Responsive layout</td>
+                        <td>@media (max-width: 650px)</td>
+                        <td>I centre the header content, remove floats and stack cards into one column on smaller screens to improve readability and reduce crowding.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p>
+                I researched and chose CSS Grid because my earlier inline-block layout
+                did not automatically equalise neighbouring card heights, while fixed
+                heights could cause text to overflow on narrower screens. Grid allows
+                cards within each row to stretch to the same height, accommodating
+                different amounts of text without a fixed height.
+            </p>
+        </section>
+        <section id ="design-reasoning" class ="page-section">
+            <h2>Aesthetics and Design Selection</h2>
+        </section>
+
+        <section id ="design-accessibility" class = "page-section">
+            <h2>Accessibility and Resizable</h2>
+        </section>
+    </main>
     <footer class="page-footer">
         <p>Nhat Quang Do - 24712097 - Web Assignment</p>
     </footer>
