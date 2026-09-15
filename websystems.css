@@ -12,7 +12,7 @@ body {
 }
 /* B/c it is interesting so I put a comment. I use scroll-margin-top (research outside) to avoid the content to be hidden by the nav-abr after anchor jump as previously it happened */
 #page-main {
-    scroll-margin-top: 40px;
+    scroll-margin-top: 76px;
     min-height: 65vh;
     width: 90%;
     margin:0 auto;
@@ -116,7 +116,7 @@ p {margin-bottom: 16px;}
 .portrait-img {
     display: block;
     width: 30%;
-    height: 0%;
+    height: auto;
     margin: 16px auto;
     border: 5px solid #3159d9;
     border-radius: 30px;
@@ -124,6 +124,13 @@ p {margin-bottom: 16px;}
 .overall-design-img {
     display: block;
     width: 60%;
+    height: auto;
+    margin: 30px auto;
+}
+
+.annotation-img{
+    display: block;
+    width: 80%;
     height: auto;
     margin: 30px auto;
 }
@@ -191,7 +198,7 @@ caption {
 #css-design,
 #design-reasoning,
 #design-accessibility {
-    scroll-margin-top: 40px;
+    scroll-margin-top: 76px;
 }
 
 
@@ -209,7 +216,7 @@ caption {
     #design-reasoning,
     #design-accessibility,
     #page-main{
-        scroll-margin-top: 80px;
+        scroll-margin-top: 100px;
     }
     .logo,
     .nav-bar {

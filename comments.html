@@ -26,7 +26,7 @@
             <a href="#overall-design">overall website design</a>,
             <a href="#html-design">internal HTML structure</a>,
             <a href="#css-design">CSS implementation</a>,
-            <a href="#design-reasoning">design reasoning</a> and
+            <a href="#design-reasoning">aesthetics</a> and
             <a href="#design-accessibility">accessibility</a>.
         </p>
         <section id = "overall-design" class="page-section">
@@ -239,58 +239,177 @@
             </p>
         </section>
         <section id ="design-reasoning" class ="page-section">
-            <h2>Design Reasoning</h2>
+            <h2>Aesthetics and Design Reasoning</h2>
             <p>My website design uses a simple grey, white, black and blue colour scheme to create a professional look and keep the focus on the content.</p>
             <table>
-            <caption>Design choices and reasoning</caption>
+                <caption>Design choices and their intended effects</caption>
                 <thead>
                     <tr>
                         <th scope="col">Design choice</th>
-                        <th scope="col">Reasoning</th>
+                        <th scope="col">Reasoning and intended effect</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>Light grey background and white header with black border</td>
-                        <td>I use a light grey background to keep attention on the dark content. A white header with a black border separates navigation from content while scrolling.</td>
+                        <td>I choose a neutral light grey background to keep attention on the content. The white header and black border distinguish navigation from the content while scrolling.</td>
                     </tr>
                     <tr>
                         <td>Dark text and blue accents</td>
-                        <td>I use dark text for contrast against light backgrounds. Blue accents reinforce my colour theme and draw attention to links, my name and selected borders.</td>
+                        <td>I use dark text to provide strong contrast against light backgrounds for readability. Blue accents highlight links and my name, while blue borders connect elements to the website’s colour theme.</td>
                     </tr>
                     <tr>
                         <td>Arial and fallback fonts</td>
-                        <td>I choose Arial for its familiar, readable appearance, with Helvetica and a generic sans-serif as alternatives if Arial is unavailable.</td>
+                        <td>I choose Arial for its familiar, readable appearance across paragraphs, lists and tables. Helvetica and a generic sans-serif provide alternatives if Arial is unavailable.</td>
                     </tr>
                     <tr>
                         <td>Heading sizes</td>
-                        <td>I use 36px, 28px and 24px for page titles, sections and subsections to make the content hierarchy clear and easy to scan.</td>
-                    </tr>
-                    <tr>
-                        <td>Section borders</td>
-                        <td>I use thin top borders to separate topics and help readers recognise transitions between sections.</td>
+                        <td>I use 36px, 28px and 24px for page titles, section headings and subsection headings, respectively. These differences clarify the content hierarchy and help users find relevant information quickly.</td>
                     </tr>
                     <tr>
                         <td>Cards</td>
-                        <td>I use cards to divide content into manageable groups. Pale backgrounds and padding separate each group, while blue top borders maintain the colour theme.</td>
+                        <td>I choose cards to group page descriptions and links on Home, and separate goals from skills on Future. Pale backgrounds and padding make each group easy to scan, while blue top borders maintain visual consistency.</td>
                     </tr>
                     <tr>
                         <td>Tables</td>
-                        <td>I use tables to make experiences, skills, CSS techniques and design decisions easy to compare. Blue headings with white text distinguish column labels from data.</td>
+                        <td>I choose tables to align related information about my experiences, skills, CSS techniques and design decisions, making comparisons easier than reading separate paragraphs. Blue headers with white text distinguish column labels from the entries.</td>
                     </tr>
                     <tr>
                         <td>Image styling</td>
-                        <td>I give my portrait a blue border and rounded corners to match the theme and cards. I centre diagrams with transparent backgrounds and adjust their widths to make key information readable.</td>
+                        <td>I give my portrait a blue border to match the colour theme and rounded corners to echo the cards’ softer appearance. I centre graph diagrams and adjust their widths so their details are readable and integrated with the surrounding content.</td>
                     </tr>
                     <tr>
                         <td>Consistent navigation and footer</td>
-                        <td>I keep navigation and footer placement consistent so pages feel familiar. The active link identifies the current page, while centred, italic footer text and a separating border distinguish author information.</td>
+                        <td>I keep navigation and footer placement consistent so users encounter a familiar layout on every page. Highlighting the active link identifies their current page, while centred, italic footer text and a separating border distinguish author information from the main content.</td>
+                    </tr>
+                    <tr>
+                        <td>Section spacing and borders</td>
+                        <td>I use spacing and thin top borders to separate major topics, giving readers a clear visual break and making sections easier to identify and scan.</td>
                     </tr>
                 </tbody>
             </table>
+            <p>The annotated screenshot below illustrates the design decisions discussed above.</p>
+            <img class ="annotation-img" src = "img/PageAnnotated.jpg" alt ="This image shows an annotated screenshot of my webpage, highlighting the design decisions discussed above.">
         </section>
         <section id ="design-accessibility" class = "page-section">
-            <h2>Accessibility and Resisable</h2>
+            <h2>Accessibility and Resizing</h2>
+            <p>The two tables below illustrate in details my implementation/ design and test for accessibility, 
+                and recovery under scenario when img/css being disable as well as adaptability, resizing across
+                different browser and monitor size, zoom
+            </p>
+
+            <table>
+                <caption>Accessibility features and their purposes</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Area</th>
+                        <th scope="col">Implementation and reasoning</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Image alternatives</td>
+                        <td>I use alt attributes to describe my portrait and diagrams when they cannot be seen. Nearby explanations also communicate the diagrams’ key information, so essential content does not depend entirely on images.</td>
+                    </tr>
+                    <tr>
+                        <td>Usability without CSS or images</td>
+                        <td>I organise headings, paragraphs, lists, tables and links in a logical HTML order. When I disabled CSS, the content remained understandable. With images disabled, the written explanations and navigation remained available.</td>
+                    </tr>
+                    <tr>
+                        <td>Keyboard navigation</td>
+                        <td>I use native HTML links to support keyboard access. I checked Tab and Shift+Tab navigation and Enter activation, confirming that links were reachable in a logical order with visible focus indicators.</td>
+                    </tr>
+                    <tr>
+                        <td>Navigation clarity</td>
+                        <td>I provide consistent menus and descriptive link text to make destinations clear. Blue text and an underline identify the current page visually, while aria-current="page" communicates it to assistive technologies.</td>
+                    </tr>
+                    <tr>
+                        <td>Text readability</td>
+                        <td>I use Arial with fallback fonts, distinct heading sizes and a line height of 1.6 to support reading and scanning. Paragraph and section spacing separate ideas and reduce crowding.</td>
+                    </tr>
+                    <tr>
+                        <td>Colour contrast</td>
+                        <td>I use dark text against light backgrounds for readability. Calculated contrast ratios are approximately 13.48:1 for body text, 6.69:1 for general links and 5.90:1 for white table-heading text against blue. These measurements assess the specified colour pairs, not overall accessibility.</td>
+                    </tr>
+                    <tr>
+                        <td>Resizing and zoom</td>
+                        <td>I use proportional widths to adapt content to the available space. At 650px or below, cards form one column and header floats are removed. During my resizing and zoom tests, content remained readable and navigation remained usable.</td>
+                    </tr>
+                    <tr>
+                        <td>Sticky header and internal links</td>
+                        <td>I apply scroll-margin-top to selected anchor destinations to leave space above them. I checked internal links to confirm that destination headings remained visible below the sticky header.</td>
+                    </tr>
+                    <tr>
+                        <td>HTML structure</td>
+                        <td>I declare English as the document language and use descriptive page titles, meaningful headings and semantic page regions. These help assistive technologies and search engines interpret the content and its organisation.</td>
+                    </tr>
+                    <tr>
+                        <td>Tables</td>
+                        <td>I provide captions to identify each table and scope="col" on column headings to associate labels with data. I also checked that table content remained readable when the browser window narrowed.</td>
+                    </tr>
+                    <tr>
+                        <td>Print usability</td>
+                        <td>I checked print preview to confirm that content remained complete and readable without overlap or clipping. Headings, text and table organisation preserved meaning without relying on background colours.</td>
+                    </tr>
+                    <tr>
+                        <td>JavaScript independence</td>
+                        <td>I use HTML for essential content and navigation, so users can read the website and follow its links without JavaScript.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <table>
+                <caption>Summary of accessibility testing</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Test performed</th>
+                        <th scope="col">Conditions</th>
+                        <th scope="col">Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Browser compatibility</td>
+                        <td>Google Chrome and Safari</td>
+                        <td>Content and navigation worked as intended in both browsers.</td>
+                    </tr>
+                    <tr>
+                        <td>Viewport resizing</td>
+                        <td>1024 × 768 and narrow widths at 375px </td>
+                        <td>Content remained readable, and cards changed to one column on narrow screens.</td>
+                    </tr>
+                    <tr>
+                        <td>Browser zoom</td>
+                        <td>150% and 200%</td>
+                        <td>Text remained readable and navigation remained usable.</td>
+                    </tr>
+                    <tr>
+                        <td>Keyboard access</td>
+                        <td>Tab, Shift+Tab and Enter</td>
+                        <td>Links were reachable, focus was visible and activation worked.</td>
+                    </tr>
+                    <tr>
+                        <td>Internal navigation</td>
+                        <td>Links to section IDs beneath the sticky header</td>
+                        <td>Destination headings remained visible after applying scroll margins.</td>
+                    </tr>
+                    <tr>
+                        <td>CSS and images disabled</td>
+                        <td>Styles and images disabled separately</td>
+                        <td>Content remained understandable and links remained usable.</td>
+                    </tr>
+                    <tr>
+                        <td>Print preview</td>
+                        <td>Browser print preview</td>
+                        <td>Content remained complete and readable without overlap or clipping.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p>
+                These results describe the conditions I tested and do not establish
+                compatibility with every device or assistive technology.
+            </p>
         </section>
     </main>
     <footer class="page-footer">
